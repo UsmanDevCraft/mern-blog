@@ -15,7 +15,7 @@ const Article = () => {
 
   const [comments, setComment] = useState([]);
     const fetchingData = async () => {
-        const response = await fetch(`http://localhost:3000/api/articles/learn-node`, {
+        const response = await fetch(`https://backend-blog-mern.vercel.app/api/articles/learn-node`, {
             method: "GET",
         });
         const commentsAll = await response.json();
