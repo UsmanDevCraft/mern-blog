@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Comments = ({ comments }) => {
+const Comments = ({ comments, deleteComment }) => {
 
   return (
     <>
@@ -12,6 +12,7 @@ const Comments = ({ comments }) => {
           <div key={index}>
             <h4 className='text-xl font-bold'>{comment.username}</h4>
             <p className='mt-1 mb-4'>{comment.comments}</p>
+            <button type='submit' onClick={()=>{deleteComment(comment._id)}} className='border-2'>Delete</button>
           </div>
         ))
       ) : (
